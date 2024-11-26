@@ -1,10 +1,19 @@
 import './App.css'
+import tasks from '../tasks'
 
-const title = 'hello world'
+const title = 'Task Manager'
 
 function App() {
+
     return (
-        <h1>{title}</h1>
+        <>
+            <div className='header'>
+                <h1>{title}</h1>
+            </div>
+
+            <h3>Current Tasks</h3>
+        </>
+        
     )
 }
 
