@@ -21,7 +21,11 @@ function App() {
                 <ul>
                     {backlogOrInProgress.map(task => (
                         <li>
-                            <strong>{task.title}</strong>
+                            <div className='task title'>
+                                <strong>{task.title}</strong>
+                                <strong className={`badge ${task.state}`}>{task.state}</strong>
+                            </div>
+                            
                             <p>Priority:{task.priority}</p>
                             <p>Est. time:{task.estimatedTime}</p>
                         </li>
@@ -33,7 +37,10 @@ function App() {
                 <ul>
                 {completed.map(task => (
                         <li>
-                            <strong>{task.title}</strong>
+                            <div className='task title'>
+                                <strong>{task.title}</strong>
+                                <strong className={`badge ${task.state}`}>{task.state}</strong>
+                            </div>
                             <p>Priority:{task.priority}</p>
                             <p>Est. time:{task.estimatedTime}</p>
                         </li>
